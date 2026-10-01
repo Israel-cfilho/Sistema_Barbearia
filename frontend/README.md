@@ -11,7 +11,6 @@ A aplicação possui interfaces específicas para clientes, barbeiros e administ
 * **React 19**
 * **Vite 8**
 * **React Router DOM 7**
-* **Tailwind CSS 4**
 * **Lucide React**
 * **React Toastify**
 * **JavaScript (ES Modules)**
