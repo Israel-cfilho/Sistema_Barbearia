@@ -1,20 +1,23 @@
 # 💈 Sistema Barbearia — Frontend
 
-Frontend do sistema de gerenciamento de barbearia, desenvolvido com **React** e **Vite**.
+Frontend do **Sistema Barbearia**, desenvolvido com **React** e **Vite**, responsável pela interface web utilizada por clientes, barbeiros e administradores.
 
-A aplicação possui interfaces específicas para clientes, barbeiros e administradores/donos da barbearia, permitindo realizar agendamentos, consultar serviços, acompanhar atendimentos e gerenciar informações do estabelecimento.
+A aplicação possui páginas e funcionalidades específicas para cada perfil de usuário, incluindo autenticação, agendamentos, serviços, gerenciamento de perfil, dashboards e relatórios.
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-* **React 19**
-* **Vite 8**
-* **React Router DOM 7**
+* **React**
+* **Vite**
+* **JavaScript**
+* **React Router DOM**
+* **CSS3**
 * **Lucide React**
 * **React Toastify**
-* **JavaScript (ES Modules)**
 * **ESLint**
+
+O projeto utiliza **CSS puro**, organizado em arquivos próprios para estilização dos componentes e páginas.
 
 ---
 
@@ -65,56 +68,165 @@ frontend/
 
 ---
 
-## 👥 Perfis do sistema
+## 👥 Perfis de acesso
 
-O frontend possui interfaces para diferentes tipos de usuários:
+O frontend possui interfaces específicas para os diferentes perfis do sistema.
 
 ### 👤 Cliente
 
-* Cadastro e login
-* Visualização dos serviços
-* Agendamento de serviços
-* Confirmação de agendamento
-* Consulta dos próprios agendamentos
-* Atualização do perfil
-* Recuperação e redefinição de senha
+O cliente pode:
+
+* Criar uma conta;
+* Realizar login;
+* Recuperar a senha;
+* Redefinir a senha;
+* Visualizar os serviços disponíveis;
+* Escolher barbeiro;
+* Realizar agendamentos;
+* Confirmar agendamentos;
+* Consultar seus agendamentos;
+* Visualizar informações do perfil;
+* Atualizar seus dados.
 
 ### 💈 Barbeiro
 
-* Dashboard
-* Visualização da agenda
-* Gerenciamento dos atendimentos
-* Acompanhamento do desempenho
-* Gerenciamento do perfil
+O barbeiro possui acesso a:
+
+* Dashboard;
+* Agenda de atendimentos;
+* Visualização dos agendamentos;
+* Acompanhamento dos atendimentos;
+* Informações de desempenho;
+* Gerenciamento do perfil.
 
 ### 👑 Dono / Administrador
 
-* Dashboard administrativo
-* Gerenciamento de agendamentos
-* Gerenciamento de barbeiros
-* Gerenciamento de serviços
-* Relatórios
-* Acompanhamento das informações da barbearia
+O perfil administrativo possui funcionalidades para:
+
+* Visualizar dashboard;
+* Gerenciar agendamentos;
+* Gerenciar barbeiros;
+* Gerenciar serviços;
+* Consultar relatórios;
+* Acompanhar informações da barbearia.
 
 ---
 
-## ⚙️ Instalação
+## 🎨 Estilização
 
-### 1. Instalar as dependências
+A interface utiliza **CSS3 puro**, sem frameworks de estilização.
 
-Dentro da pasta `frontend`:
+Os estilos são organizados junto às páginas e componentes da aplicação, permitindo personalização completa da identidade visual da barbearia.
+
+Entre os recursos utilizados estão:
+
+* CSS responsivo;
+* Flexbox;
+* CSS Grid;
+* Media Queries;
+* Animações e transições;
+* Variáveis CSS;
+* Efeitos de hover;
+* Layouts adaptáveis para diferentes tamanhos de tela.
+
+---
+
+## 🧭 Navegação
+
+A navegação entre as páginas é realizada utilizando **React Router DOM**.
+
+O sistema possui rotas destinadas aos diferentes fluxos da aplicação, incluindo:
+
+```text
+Login
+Cadastro
+Serviços
+Agendamentos
+Confirmação de agendamento
+Meus agendamentos
+Perfil
+Dashboard do barbeiro
+Dashboard administrativo
+Recuperação de senha
+Redefinição de senha
+Página não encontrada
+```
+
+---
+
+## 🔐 Autenticação
+
+O frontend realiza a autenticação através da API REST disponibilizada pelo backend.
+
+Após o login, o usuário recebe as informações necessárias para autenticação das requisições e acesso às funcionalidades correspondentes ao seu perfil.
+
+O controle de acesso é integrado ao sistema de segurança implementado no backend com **JWT e Spring Security**.
+
+---
+
+## 🔗 Comunicação com o Backend
+
+O frontend se comunica com o backend através de requisições HTTP para a API REST.
+
+Em ambiente local, o backend é executado normalmente em:
+
+```text
+http://localhost:8080
+```
+
+Enquanto o frontend é executado pelo Vite em:
+
+```text
+http://localhost:5173
+```
+
+Fluxo da aplicação:
+
+```text
+┌─────────────────────────┐
+│        React            │
+│       Frontend          │
+│                         │
+│   localhost:5173        │
+└────────────┬────────────┘
+             │
+             │ HTTP / REST
+             ▼
+┌─────────────────────────┐
+│     Spring Boot         │
+│        Backend          │
+│                         │
+│   localhost:8080        │
+└─────────────────────────┘
+```
+
+---
+
+## 📦 Instalação
+
+Primeiramente, entre na pasta do frontend:
+
+```bash
+cd frontend
+```
+
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-### 2. Executar em desenvolvimento
+---
+
+## ▶️ Executando em desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Após iniciar, o Vite disponibilizará a aplicação no endereço informado pelo terminal, normalmente:
+O Vite exibirá no terminal o endereço da aplicação, normalmente:
 
 ```text
 http://localhost:5173
@@ -124,10 +236,16 @@ http://localhost:5173
 
 ## 🏗️ Build de produção
 
-Para gerar a versão de produção:
+Para gerar a versão otimizada para produção:
 
 ```bash
 npm run build
+```
+
+O resultado será disponibilizado na pasta:
+
+```text
+dist/
 ```
 
 Para visualizar o build localmente:
@@ -138,9 +256,9 @@ npm run preview
 
 ---
 
-## 🧹 Lint
+## 🧹 ESLint
 
-Para verificar problemas no código:
+Para verificar possíveis problemas no código:
 
 ```bash
 npm run lint
@@ -148,57 +266,64 @@ npm run lint
 
 ---
 
-## 🔗 Integração com o Backend
+## 🖥️ Responsividade
 
-O frontend se comunica com a API REST desenvolvida em **Spring Boot**.
+A aplicação foi desenvolvida para funcionar em diferentes tamanhos de tela, utilizando CSS responsivo.
 
-Por padrão, o backend da aplicação utiliza:
+São considerados diferentes formatos de dispositivos, como:
 
-```text
-http://localhost:8080
-```
-
-O backend é responsável por autenticação, usuários, agendamentos, serviços, barbeiros, relatórios e persistência dos dados.
-
----
-
-## 🔐 Autenticação
-
-A autenticação da aplicação utiliza **JWT (JSON Web Token)**.
-
-O sistema possui diferentes níveis de acesso de acordo com o perfil do usuário, permitindo direcionar cada usuário para as funcionalidades correspondentes.
+* Computadores;
+* Notebooks;
+* Tablets;
+* Smartphones.
 
 ---
 
-## 🎨 Interface
+## 🔔 Notificações
 
-A aplicação utiliza componentes próprios e estilos específicos para cada página, além de:
+O projeto utiliza **React Toastify** para exibição de mensagens e notificações ao usuário.
 
-* Ícones com Lucide React
-* Notificações com React Toastify
-* Layouts específicos por perfil
-* Design responsivo
-* Imagens e elementos visuais próprios da barbearia
+Exemplos:
+
+* Sucesso;
+* Erros;
+* Avisos;
+* Confirmações;
+* Feedback de operações.
+
+---
+
+## 🎨 Ícones
+
+Os ícones utilizados na interface são fornecidos pelo **Lucide React**, permitindo uma utilização consistente dos elementos visuais da aplicação.
 
 ---
 
 ## 📌 Scripts disponíveis
 
-| Comando           | Função                                |
-| ----------------- | ------------------------------------- |
-| `npm run dev`     | Executa o servidor de desenvolvimento |
-| `npm run build`   | Gera o build de produção              |
-| `npm run preview` | Visualiza o build de produção         |
-| `npm run lint`    | Executa o ESLint                      |
+| Comando           | Descrição                            |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Inicia o ambiente de desenvolvimento |
+| `npm run build`   | Gera o build de produção             |
+| `npm run preview` | Executa uma prévia do build          |
+| `npm run lint`    | Verifica problemas com ESLint        |
 
 ---
 
 ## 🔗 Backend
 
-O backend deste projeto está localizado em:
+O backend do sistema está localizado em:
 
 ```text
 ../backend
 ```
 
-Para informações sobre a arquitetura completa do sistema, consulte o `README.md` localizado na raiz do projeto.
+Ele é responsável pelas regras de negócio, autenticação, banco de dados, agendamentos, usuários, serviços, barbeiros e relatórios.
+
+Consulte o `README.md` da pasta `backend` para mais informações.
+
+---
+
+## 📄 Licença
+
+Projeto desenvolvido para fins de estudo e/ou utilização no gerenciamento de uma barbearia.
