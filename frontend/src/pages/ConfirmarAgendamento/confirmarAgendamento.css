@@ -1,0 +1,430 @@
+.confirmacao-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1a0d0c 0%,
+            #0d0909 45%,
+            #070707 100%
+        );
+
+    color: var(--text-primary);
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.confirmacao-container {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* ======================
+   TÍTULO
+====================== */
+
+.confirmacao-header {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.confirmacao-header > span {
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.confirmacao-header h1 {
+    margin: 12px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 48px;
+    line-height: 1;
+
+    color: var(--text-primary);
+}
+
+
+.confirmacao-header h1 strong {
+    color: var(--primary);
+}
+
+
+.confirmacao-header p {
+    margin: 12px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+
+/* ======================
+   CARD
+====================== */
+
+.resumo-agendamento {
+    padding: 30px;
+
+    border: 1px solid #3c2927;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151110,
+            #100e0e
+        );
+}
+
+
+.resumo-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid #382725;
+}
+
+
+.resumo-icon-principal {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(251, 19, 19, 0.09);
+
+    color: var(--primary);
+}
+
+
+.resumo-topo span {
+    color: #837674;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.resumo-topo h2 {
+    margin: 3px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    color: #f2e5e2;
+}
+
+
+/* ======================
+   GRID
+====================== */
+
+.resumo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding: 25px 0;
+}
+
+
+.resumo-item {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #312321;
+    border-radius: 9px;
+
+    background: #0d0c0c;
+}
+
+
+.resumo-item-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    background:
+        rgba(251, 19, 19, 0.07);
+}
+
+
+.resumo-item span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #766a68;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.resumo-item strong {
+    display: block;
+
+    color: #eee0dd;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+}
+
+
+.resumo-item p {
+    margin: 3px 0 0;
+
+    color: #746a68;
+
+    font-size: 9px;
+}
+
+
+/* ======================
+   TOTAL
+====================== */
+
+.resumo-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #382725;
+}
+
+
+.resumo-total span {
+    color: #958987;
+
+    font-size: 12px;
+}
+
+
+.resumo-total strong {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 28px;
+
+    color: var(--primary);
+}
+
+
+/* ======================
+   AVISO
+====================== */
+
+.confirmacao-aviso {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 16px;
+
+    padding: 17px 20px;
+
+    border: 1px solid #3b2927;
+    border-radius: 9px;
+
+    background:
+        rgba(251, 19, 19, 0.035);
+
+    color: var(--primary);
+}
+
+
+.confirmacao-aviso p {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin: 0;
+
+    color: #867b79;
+
+    font-size: 10px;
+}
+
+
+.confirmacao-aviso strong {
+    color: #e6d8d5;
+
+    font-size: 11px;
+}
+
+
+/* ======================
+   BOTÕES
+====================== */
+
+.confirmacao-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.confirmacao-actions button {
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 22px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.confirmacao-voltar {
+    border:
+        1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--text-secondary);
+}
+
+
+.confirmacao-voltar:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+
+.confirmacao-confirmar {
+    min-width: 230px;
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+}
+
+
+.confirmacao-confirmar:hover:not(:disabled) {
+    background: var(--primary-hover);
+
+    transform: translateY(-2px);
+}
+
+
+.confirmacao-confirmar:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 650px) {
+
+    .confirmacao-page {
+        align-items: flex-start;
+
+        padding: 40px 15px;
+    }
+
+
+    .confirmacao-header h1 {
+        font-size: 39px;
+    }
+
+
+    .resumo-agendamento {
+        padding: 20px;
+    }
+
+
+    .resumo-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .confirmacao-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .confirmacao-actions button {
+        width: 100%;
+    }
+
+}

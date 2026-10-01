@@ -1,0 +1,453 @@
+.dono-dashboard {
+  min-height: 100vh;
+
+  background: #080808;
+
+  color: #f3d5d0;
+}
+
+.dono-dashboard-main {
+  min-height: 100vh;
+
+  margin-left: 240px;
+
+  padding: 45px;
+}
+
+.dono-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.dono-dashboard-header span {
+  color: #fb1313;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.dono-dashboard-header h1 {
+  margin: 5px 0;
+
+  font-size: 31px;
+}
+
+.dono-dashboard-header p {
+  margin: 0;
+
+  color: #887976;
+
+  font-size: 12px;
+}
+
+/* CARDS */
+
+.dono-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+.dono-card {
+  min-height: 145px;
+
+  padding: 22px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-card-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 19px;
+
+  border-radius: 7px;
+
+  color: #fb1313;
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.08
+    );
+}
+
+.dono-card span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8f7773;
+
+  font-size: 10px;
+}
+
+.dono-card strong {
+  color: #f3d5d0;
+
+  font-size: 22px;
+}
+
+/* DESTAQUES */
+
+.dono-destaques {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+.dono-destaque-card {
+  padding: 24px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-destaque-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.dono-destaque-topo svg {
+  color: #fb1313;
+}
+
+.dono-destaque-topo span {
+  color: #fb1313;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.dono-destaque-topo h2 {
+  margin: 5px 0 0;
+
+  font-size: 15px;
+}
+
+.dono-destaque-nome {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 20px;
+}
+
+.dono-destaque-info {
+  display: flex;
+
+  gap: 20px;
+
+  color: #958481;
+
+  font-size: 11px;
+}
+
+.dono-destaque-info p {
+  margin: 0;
+}
+
+.dono-sem-dados {
+  color: #706260;
+
+  font-size: 11px;
+}
+
+/* AGENDAMENTOS */
+
+.dono-agendamentos-section {
+  padding: 24px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.dono-section-header span {
+  color: #fb1313;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.dono-section-header h2 {
+  margin: 4px 0 0;
+
+  font-size: 16px;
+}
+
+.dono-section-header button {
+  padding: 8px 13px;
+
+  border: 1px solid #3b2a28;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #c7b3af;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.dono-section-header button:hover {
+  border-color: #fb1313;
+
+  color: #fb1313;
+}
+
+.dono-agendamentos-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.dono-agendamento-item {
+  min-height: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    75px
+    minmax(150px, 1fr)
+    minmax(120px, 180px)
+    100px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border-top: 1px solid #221a19;
+}
+
+.dono-agendamento-hora {
+  color: #fb4a4a;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dono-agendamento-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.dono-agendamento-info strong {
+  font-size: 12px;
+}
+
+.dono-agendamento-info span {
+  color: #81716e;
+
+  font-size: 10px;
+}
+
+.dono-agendamento-barbeiro {
+  color: #9c8985;
+
+  font-size: 10px;
+}
+
+.dono-status {
+  width: fit-content;
+
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.status-pendente {
+  background:
+    rgba(
+      255,
+      193,
+      7,
+      0.08
+    );
+
+  color: #e9b83e;
+}
+
+.status-confirmado {
+  background:
+    rgba(
+      33,
+      150,
+      243,
+      0.08
+    );
+
+  color: #5eace7;
+}
+
+.status-concluído,
+.status-concluido {
+  background:
+    rgba(
+      55,
+      190,
+      105,
+      0.08
+    );
+
+  color: #57c87c;
+}
+
+.status-cancelado {
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.08
+    );
+
+  color: #fb4a4a;
+}
+
+.dono-vazio {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #726461;
+
+  font-size: 11px;
+}
+
+.dono-loading {
+  padding: 60px;
+
+  text-align: center;
+
+  color: #8f7773;
+}
+
+.dono-dashboard-erro {
+  margin-bottom: 20px;
+
+  padding: 13px;
+
+  border:
+    1px solid
+    rgba(
+      251,
+      19,
+      19,
+      0.3
+    );
+
+  border-radius: 7px;
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.05
+    );
+
+  color: #fb6464;
+
+  font-size: 11px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1200px) {
+  .dono-cards {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+@media (max-width: 900px) {
+  .dono-dashboard-main {
+    margin-left: 0;
+
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dono-cards,
+  .dono-destaques {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-dashboard-main {
+    padding: 25px 16px;
+  }
+
+  .dono-agendamento-item {
+    grid-template-columns:
+      55px
+      1fr;
+
+    padding: 14px 0;
+  }
+
+  .dono-agendamento-barbeiro,
+  .dono-status {
+    grid-column: 2;
+  }
+}

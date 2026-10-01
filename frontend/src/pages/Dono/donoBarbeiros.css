@@ -1,0 +1,612 @@
+.dono-bar-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #f3d5d0;
+}
+
+.dono-bar-main {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 45px;
+}
+
+/* HEADER */
+
+.dono-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.dono-bar-header > div > span {
+  color: #fb1313;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.dono-bar-header h1 {
+  margin: 5px 0;
+  font-size: 31px;
+}
+
+.dono-bar-header p {
+  margin: 0;
+  color: #887976;
+  font-size: 12px;
+}
+
+.dono-bar-novo {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #fb1313;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dono-bar-novo:hover {
+  background: #df1010;
+  transform: translateY(-1px);
+}
+
+/* CONTROLES */
+
+.dono-bar-controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.dono-bar-busca {
+  width: 100%;
+  max-width: 430px;
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  padding: 0 14px;
+
+  border: 1px solid #352725;
+  border-radius: 7px;
+
+  background: #0d0d0d;
+
+  color: #776865;
+}
+
+.dono-bar-busca:focus-within {
+  border-color: #fb1313;
+}
+
+.dono-bar-busca input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #f3d5d0;
+  font-size: 11px;
+}
+
+.dono-bar-busca input::placeholder {
+  color: #655754;
+}
+
+.dono-bar-contador {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #7e6e6b;
+  font-size: 10px;
+}
+
+/* GRID */
+
+.dono-bar-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.dono-bar-card {
+  position: relative;
+
+  padding: 22px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+
+  transition: 0.2s;
+}
+
+.dono-bar-card:hover {
+  transform: translateY(-2px);
+  border-color: #45312f;
+}
+
+.dono-bar-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.dono-bar-avatar {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(251, 19, 19, 0.09);
+
+  color: #fb1313;
+}
+
+.dono-bar-editar {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #302322;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #887774;
+
+  cursor: pointer;
+}
+
+.dono-bar-editar:hover {
+  border-color: #fb1313;
+  color: #fb1313;
+}
+
+.dono-bar-card-nome {
+  margin-bottom: 22px;
+}
+
+.dono-bar-card-nome span {
+  color: #fb1313;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+.dono-bar-card-nome h2 {
+  margin: 5px 0 0;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #e2cfcb;
+}
+
+.dono-bar-card-infos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #251c1b;
+}
+
+.dono-bar-card-infos > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+
+  color: #7f6e6b;
+}
+
+.dono-bar-card-infos svg {
+  flex-shrink: 0;
+
+  color: #685653;
+}
+
+.dono-bar-card-infos span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-size: 10px;
+}
+
+.dono-bar-card-infos strong {
+  margin-left: auto;
+
+  color: #fb4a4a;
+
+  font-size: 11px;
+}
+
+/* ALERTAS */
+
+.dono-bar-alert {
+  margin-bottom: 20px;
+
+  padding: 13px 15px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+.dono-bar-alert.erro {
+  border: 1px solid rgba(251, 19, 19, 0.3);
+  background: rgba(251, 19, 19, 0.05);
+  color: #fb6464;
+}
+
+.dono-bar-alert.sucesso {
+  border: 1px solid rgba(58, 190, 103, 0.25);
+  background: rgba(58, 190, 103, 0.05);
+  color: #65ce89;
+}
+
+/* ESTADOS */
+
+.dono-bar-loading {
+  padding: 70px;
+
+  text-align: center;
+
+  color: #806f6c;
+  font-size: 11px;
+}
+
+.dono-bar-vazio {
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+
+  text-align: center;
+
+  color: #71615e;
+}
+
+.dono-bar-vazio svg {
+  margin-bottom: 15px;
+  color: #493a38;
+}
+
+.dono-bar-vazio h2 {
+  margin: 0 0 7px;
+
+  color: #bca8a4;
+  font-size: 15px;
+}
+
+.dono-bar-vazio p {
+  margin: 0;
+  font-size: 10px;
+}
+
+/* MODAL */
+
+.dono-bar-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 3000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  backdrop-filter: blur(4px);
+}
+
+.dono-bar-modal {
+  width: 100%;
+  max-width: 580px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  border: 1px solid #3b2927;
+  border-radius: 12px;
+
+  background: #0c0a0a;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.5);
+}
+
+.dono-bar-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 24px;
+
+  border-bottom: 1px solid #29201f;
+}
+
+.dono-bar-modal-header span {
+  color: #fb1313;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.dono-bar-modal-header h2 {
+  margin: 5px 0 0;
+
+  color: #e2cfcb;
+
+  font-size: 19px;
+}
+
+.dono-bar-modal-header > button {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #171212;
+
+  color: #8d7c79;
+
+  cursor: pointer;
+}
+
+.dono-bar-modal-header > button:hover {
+  color: #fb4a4a;
+}
+
+/* FORM */
+
+.dono-bar-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: 24px;
+}
+
+.dono-bar-form-linha {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.65fr);
+
+  gap: 13px;
+}
+
+.dono-bar-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.dono-bar-form-group label {
+  color: #ad9995;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.7px;
+}
+
+.dono-bar-form-group input {
+  width: 100%;
+  min-height: 45px;
+
+  padding: 0 13px;
+
+  border: 1px solid #392927;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #090909;
+
+  color: #e1ceca;
+
+  font-size: 11px;
+}
+
+.dono-bar-form-group input:focus {
+  border-color: #fb1313;
+}
+
+.dono-bar-form-group input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dono-bar-form-group input::placeholder {
+  color: #5d504e;
+}
+
+.dono-bar-form-group small {
+  color: #685b58;
+  font-size: 9px;
+}
+
+.dono-bar-form-erro {
+  padding: 11px 13px;
+
+  border: 1px solid rgba(251, 19, 19, 0.25);
+  border-radius: 6px;
+
+  background: rgba(251, 19, 19, 0.05);
+
+  color: #fb6464;
+
+  font-size: 10px;
+}
+
+.dono-bar-form-acoes {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  margin-top: 5px;
+}
+
+.dono-bar-btn-cancelar,
+.dono-bar-btn-salvar {
+  min-height: 40px;
+
+  padding: 0 16px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.dono-bar-btn-cancelar {
+  border: 1px solid #392927;
+
+  background: transparent;
+
+  color: #9b8985;
+}
+
+.dono-bar-btn-salvar {
+  border: none;
+
+  background: #fb1313;
+
+  color: white;
+}
+
+.dono-bar-btn-salvar:hover:not(:disabled) {
+  background: #df1010;
+}
+
+.dono-bar-btn-cancelar:disabled,
+.dono-bar-btn-salvar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1200px) {
+  .dono-bar-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .dono-bar-main {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dono-bar-main {
+    padding: 25px 15px;
+  }
+
+  .dono-bar-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dono-bar-novo {
+    width: 100%;
+  }
+
+  .dono-bar-controles {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dono-bar-busca {
+    max-width: none;
+  }
+
+  .dono-bar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-bar-form-linha {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-bar-modal-overlay {
+    padding: 12px;
+  }
+}

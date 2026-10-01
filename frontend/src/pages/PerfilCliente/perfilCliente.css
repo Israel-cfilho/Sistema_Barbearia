@@ -1,0 +1,777 @@
+/* =========================
+   PÁGINA
+========================= */
+
+.perfil-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1c0e0d 0%,
+            #0d0909 38%,
+            #080808 70%,
+            #050505 100%
+        );
+
+    color: var(--text-primary);
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.perfil-hero {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding:
+        70px 30px
+        45px;
+
+    text-align: center;
+}
+
+
+.perfil-label {
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+.perfil-hero h1 {
+    margin: 15px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            66px
+        );
+
+    font-weight: 600;
+
+    line-height: 0.96;
+
+    color: var(--text-primary);
+}
+
+
+.perfil-hero h1 strong {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+.perfil-hero p {
+    width: 100%;
+    max-width: 520px;
+
+    margin:
+        22px auto 0;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.perfil-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding:
+        0 20px
+        70px;
+}
+
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+
+.perfil-card {
+    width: 100%;
+
+    padding: 34px;
+
+    border:
+        1px solid #3a2927;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151110,
+            #0f0d0d
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.3
+        );
+}
+
+
+/* =========================
+   CABEÇALHO DAS SEÇÕES
+========================= */
+
+.perfil-section-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+.perfil-section-icon {
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            251,
+            19,
+            19,
+            0.25
+        );
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            251,
+            19,
+            19,
+            0.08
+        );
+
+    color: var(--primary);
+}
+
+
+.perfil-section-header h2 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #f2e6e3;
+}
+
+
+.perfil-section-header p {
+    margin: 4px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.perfil-form-group {
+    margin-bottom: 21px;
+}
+
+
+.perfil-form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #e9dcda;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.perfil-input-wrapper {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid #3f2d2b;
+
+    border-radius: 8px;
+
+    background: #0c0a0a;
+
+    color: #a99390;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.perfil-input-wrapper:focus-within {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            251,
+            19,
+            19,
+            0.08
+        );
+}
+
+
+.perfil-input-wrapper > svg {
+    flex-shrink: 0;
+
+    color: #a99390;
+}
+
+
+.perfil-input-wrapper input {
+    flex: 1;
+
+    width: 100%;
+
+    padding:
+        15px 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #f3e8e6;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+
+.perfil-input-wrapper input::placeholder {
+    color: #715c59;
+}
+
+
+/* =========================
+   BOTÃO MOSTRAR SENHA
+========================= */
+
+.perfil-eye-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #9d8b88;
+
+    cursor: pointer;
+
+    transition: color 0.2s;
+}
+
+
+.perfil-eye-button:hover {
+    color: var(--primary);
+}
+
+
+/* =========================
+   DICA SENHA
+========================= */
+
+.perfil-password-hint {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #998886;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   DIVISÓRIA
+========================= */
+
+.perfil-divider {
+    width: 100%;
+    height: 1px;
+
+    margin:
+        34px 0;
+
+    background: #362624;
+}
+
+
+/* =========================
+   BOTÃO SALVAR
+========================= */
+
+.perfil-save-area {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 30px;
+}
+
+
+.perfil-save-button {
+    min-width: 200px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        14px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+.perfil-save-button:hover:not(:disabled) {
+    background: var(--primary-hover);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.perfil-save-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   EXCLUIR CONTA
+========================= */
+
+.perfil-delete-card {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 18px;
+
+    padding:
+        25px 28px;
+
+    border:
+        1px solid #3a2927;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #14100f,
+            #0d0b0b
+        );
+}
+
+
+.perfil-delete-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.perfil-delete-icon {
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            251,
+            19,
+            19,
+            0.2
+        );
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            251,
+            19,
+            19,
+            0.07
+        );
+
+    color: var(--primary);
+}
+
+
+.perfil-delete-info h2 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    color: #f2e6e3;
+}
+
+
+.perfil-delete-info p {
+    max-width: 500px;
+
+    margin:
+        5px 0 0;
+
+    color: #a99d9b;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.perfil-delete-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid var(--primary);
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+
+.perfil-delete-button:hover {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.perfil-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+        28px 20px;
+
+    border-top:
+        1px solid #292020;
+
+    background: #050505;
+
+    color: #8f8381;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.perfil-footer svg {
+    color: var(--primary);
+}
+
+/* =========================
+   CARREGAMENTO DO PERFIL
+========================= */
+
+.perfil-loading {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 40px;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   SPINNER
+========================= */
+
+.perfil-loading-spinner {
+    width: 32px;
+    height: 32px;
+
+    border: 3px solid #3a2927;
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation:
+        perfil-loading-spin
+        0.8s linear infinite;
+}
+
+
+@keyframes perfil-loading-spin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   BOTÕES DESABILITADOS
+========================= */
+
+.perfil-delete-button:disabled,
+.perfil-save-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .perfil-hero {
+        padding:
+            50px 20px
+            35px;
+    }
+
+
+    .perfil-hero h1 {
+        font-size: 44px;
+    }
+
+
+    .perfil-container {
+        padding:
+            0 14px
+            50px;
+    }
+
+
+    .perfil-card {
+        padding:
+            24px 18px;
+    }
+
+
+    .perfil-delete-card {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .perfil-delete-button {
+        width: 100%;
+    }
+
+
+    .perfil-save-area {
+        width: 100%;
+    }
+
+
+    .perfil-save-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .perfil-hero h1 {
+        font-size: 37px;
+    }
+
+
+    .perfil-section-header {
+        align-items: flex-start;
+    }
+
+
+    .perfil-section-header h2 {
+        font-size: 23px;
+    }
+
+
+    .perfil-delete-info {
+        align-items: flex-start;
+    }
+
+
+    .perfil-delete-info h2 {
+        font-size: 22px;
+    }
+
+
+    .perfil-footer {
+        letter-spacing: 2px;
+    }
+
+}

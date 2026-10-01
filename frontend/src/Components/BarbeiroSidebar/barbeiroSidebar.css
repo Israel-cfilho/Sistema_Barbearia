@@ -1,0 +1,350 @@
+/* ============================================================
+   SIDEBAR DESKTOP
+============================================================ */
+
+.barbeiro-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 240px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #000000;
+
+  border-right: 1px solid #211918;
+}
+
+/* ============================================================
+   TOPO
+============================================================ */
+
+.barbeiro-sidebar-topo {
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #211918;
+}
+
+.barbeiro-sidebar-logo {
+  display: flex;
+  align-items: baseline;
+
+  gap: 5px;
+}
+
+.barbeiro-sidebar-logo span {
+  color: #f3d5d0;
+
+  font-size: 15px;
+  font-weight: 300;
+
+  letter-spacing: 3px;
+}
+
+.barbeiro-sidebar-logo strong {
+  color: #fb1313;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* ============================================================
+   MENU
+============================================================ */
+
+.barbeiro-sidebar-menu {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  padding: 24px 14px;
+}
+
+.barbeiro-sidebar-item {
+  width: 100%;
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #8f7773;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.barbeiro-sidebar-item:hover {
+  background: #120d0d;
+  color: #f3d5d0;
+}
+
+.barbeiro-sidebar-item.active {
+  background: rgba(251, 19, 19, 0.09);
+  color: #fb4a4a;
+}
+
+.barbeiro-sidebar-item.active svg {
+  color: #fb1313;
+}
+
+/* ============================================================
+   SAIR
+============================================================ */
+
+.barbeiro-sidebar-bottom {
+  padding: 15px 14px 22px;
+
+  border-top: 1px solid #211918;
+}
+
+.barbeiro-sair:hover {
+  background: rgba(251, 19, 19, 0.08);
+  color: #fb4a4a;
+}
+
+/* ============================================================
+   BOTÃO X
+============================================================ */
+
+.barbeiro-sidebar-close {
+  display: none;
+
+  width: 38px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #2d211f;
+  border-radius: 7px;
+
+  background: #0d0d0d;
+
+  color: #f3d5d0;
+
+  cursor: pointer;
+}
+
+.barbeiro-admin {
+  border: 1px solid #3a2927;
+  color: #c99f99;
+}
+
+.barbeiro-admin:hover {
+  border-color: #fb1313;
+  background: rgba(251, 19, 19, 0.08);
+  color: #fb1313;
+}
+
+/* ============================================================
+   HEADER MOBILE
+============================================================ */
+
+.barbeiro-mobile-header {
+  display: none;
+}
+
+.barbeiro-mobile-logo {
+  display: flex;
+  align-items: baseline;
+
+  gap: 5px;
+}
+
+.barbeiro-mobile-logo span {
+  color: #f3d5d0;
+
+  font-size: 13px;
+  font-weight: 300;
+
+  letter-spacing: 3px;
+}
+
+.barbeiro-mobile-logo strong {
+  color: #fb1313;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.barbeiro-mobile-menu-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #3a2927;
+  border-radius: 7px;
+
+  background: #151110;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* ============================================================
+   OVERLAY
+============================================================ */
+
+.barbeiro-sidebar-overlay {
+  display: none;
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 900px) {
+  .barbeiro-mobile-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 900;
+
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    background: #000000;
+
+    border-bottom: 1px solid #211918;
+  }
+
+  .barbeiro-mobile-menu-button {
+    display: flex;
+  }
+
+  .barbeiro-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1100;
+
+    width: 280px;
+    height: 100vh;
+    height: 100dvh;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+
+    box-shadow:
+      15px 0 40px
+      rgba(0, 0, 0, 0.6);
+  }
+
+  .barbeiro-sidebar.aberta {
+    transform: translateX(0);
+  }
+
+  .barbeiro-sidebar-close {
+    display: flex;
+  }
+
+  .barbeiro-sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1050;
+
+    display: block;
+
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .barbeiro-sidebar-topo {
+    min-height: 70px;
+
+    padding: 0 18px;
+  }
+
+  .barbeiro-sidebar-item {
+    min-height: 48px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* ============================================================
+   CELULAR
+============================================================ */
+
+@media (max-width: 480px) {
+  .barbeiro-mobile-header {
+    height: 60px;
+
+    padding: 0 15px;
+  }
+
+  .barbeiro-mobile-menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .barbeiro-sidebar {
+    width: 82%;
+
+    max-width: 290px;
+  }
+
+  .barbeiro-sidebar-menu {
+    padding: 20px 12px;
+  }
+
+  .barbeiro-sidebar-bottom {
+    padding: 14px 12px 18px;
+  }
+}

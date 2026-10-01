@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Montserrat", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --background: #220f0d;
+  --surface: #2f1a18;
+
+  --primary: #a31616;
+  --primary-hover: #df1010;
+
+  --text-primary: #f3d5d0;
+  --text-secondary: #c99f99;
+
+  --border: #69413d;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  background: #220f0d;
+  color: #f3d5d0;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}

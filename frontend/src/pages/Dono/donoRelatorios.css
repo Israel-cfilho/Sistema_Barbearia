@@ -1,0 +1,578 @@
+.dono-rel-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #f3d5d0;
+}
+
+.dono-rel-main {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 45px;
+}
+
+/* HEADER */
+
+.dono-rel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.dono-rel-header > div > span {
+  color: #fb1313;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.dono-rel-header h1 {
+  margin: 5px 0;
+  font-size: 31px;
+}
+
+.dono-rel-header p {
+  margin: 0;
+  color: #887976;
+  font-size: 12px;
+}
+
+.dono-rel-atualizar {
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border: 1px solid #352725;
+  border-radius: 7px;
+
+  background: #0d0d0d;
+  color: #bca8a4;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.dono-rel-atualizar:hover {
+  border-color: #fb1313;
+  color: #fb4a4a;
+}
+
+.girando {
+  animation: dono-rel-girar 1s linear infinite;
+}
+
+@keyframes dono-rel-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CARDS SUPERIORES */
+
+.dono-rel-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.dono-rel-resumo-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 20px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-rel-resumo-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: rgba(251, 19, 19, 0.08);
+  color: #fb1313;
+}
+
+.dono-rel-resumo-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dono-rel-resumo-card span {
+  color: #766663;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.dono-rel-resumo-card strong {
+  color: #e7d4d0;
+  font-size: 19px;
+}
+
+/* PERÍODO */
+
+.dono-rel-periodo {
+  margin-bottom: 16px;
+  padding: 20px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-rel-periodo-titulo {
+  margin-bottom: 18px;
+}
+
+.dono-rel-periodo-titulo > div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.dono-rel-periodo-titulo svg {
+  color: #fb1313;
+}
+
+.dono-rel-periodo-titulo h2 {
+  margin: 0 0 3px;
+  font-size: 13px;
+}
+
+.dono-rel-periodo-titulo p {
+  margin: 0;
+  color: #6f605d;
+  font-size: 9px;
+}
+
+.dono-rel-filtros {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.dono-rel-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dono-rel-campo label {
+  color: #776865;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.dono-rel-campo input {
+  height: 40px;
+  min-width: 175px;
+
+  padding: 0 11px;
+
+  border: 1px solid #352725;
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #090909;
+  color: #cdb9b5;
+
+  font-size: 10px;
+
+  color-scheme: dark;
+}
+
+.dono-rel-campo input:focus {
+  border-color: #fb1313;
+}
+
+.dono-rel-aplicar {
+  height: 40px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #fb1313;
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.dono-rel-aplicar:hover {
+  background: #df1010;
+}
+
+/* RESUMO DO PERÍODO */
+
+.dono-rel-periodo-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.dono-rel-periodo-resumo article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 17px;
+
+  border: 1px solid #251d1c;
+  border-radius: 8px;
+
+  background: #0b0b0b;
+}
+
+.dono-rel-periodo-resumo svg {
+  color: #695854;
+}
+
+.dono-rel-periodo-resumo div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.dono-rel-periodo-resumo span {
+  color: #655754;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.dono-rel-periodo-resumo strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: #cdb9b5;
+  font-size: 13px;
+}
+
+/* CONTEÚDO */
+
+.dono-rel-conteudo {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+}
+
+.dono-rel-bloco {
+  overflow: hidden;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-rel-bloco-header {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #251d1c;
+}
+
+.dono-rel-bloco-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dono-rel-bloco-header svg {
+  color: #fb1313;
+}
+
+.dono-rel-bloco-header h2 {
+  margin: 0 0 3px;
+  color: #d9c5c1;
+  font-size: 13px;
+}
+
+.dono-rel-bloco-header p {
+  margin: 0;
+  color: #685956;
+  font-size: 9px;
+}
+
+/* TABELA */
+
+.dono-rel-tabela-wrapper {
+  overflow-x: auto;
+}
+
+.dono-rel-tabela {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.dono-rel-tabela th {
+  padding: 13px 16px;
+
+  border-bottom: 1px solid #211918;
+
+  color: #615350;
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  text-align: left;
+}
+
+.dono-rel-tabela td {
+  padding: 14px 16px;
+
+  border-bottom: 1px solid #1e1716;
+
+  color: #8f7d79;
+  font-size: 10px;
+}
+
+.dono-rel-tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dono-rel-tabela tbody tr:hover {
+  background: #100d0d;
+}
+
+.dono-rel-tabela td strong {
+  color: #c7b3af;
+  font-weight: 600;
+}
+
+.dono-rel-dinheiro {
+  color: #fb5151 !important;
+}
+
+.dono-rel-posicao {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #171212;
+  color: #776865;
+}
+
+.dono-rel-posicao.posicao-1 {
+  background: rgba(251, 19, 19, 0.09);
+  color: #fb3131;
+}
+
+.dono-rel-posicao.posicao-2,
+.dono-rel-posicao.posicao-3 {
+  color: #a99591;
+}
+
+.dono-rel-numero {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* SERVIÇOS */
+
+.dono-rel-servicos {
+  display: flex;
+  flex-direction: column;
+}
+
+.dono-rel-servico {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #211918;
+}
+
+.dono-rel-servico:last-child {
+  border-bottom: none;
+}
+
+.dono-rel-servico-posicao {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #171212;
+
+  color: #fb4a4a;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.dono-rel-servico-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dono-rel-servico-info strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #cdb9b5;
+  font-size: 10px;
+}
+
+.dono-rel-servico-info span {
+  color: #675956;
+  font-size: 8px;
+}
+
+.dono-rel-servico-valor {
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.dono-rel-servico-valor span {
+  color: #5d504d;
+  font-size: 6px;
+  letter-spacing: 0.6px;
+}
+
+.dono-rel-servico-valor strong {
+  color: #fb4a4a;
+  font-size: 10px;
+}
+
+/* OUTROS */
+
+.dono-rel-alert {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(251, 19, 19, 0.3);
+  border-radius: 7px;
+
+  background: rgba(251, 19, 19, 0.05);
+
+  color: #fb6464;
+  font-size: 10px;
+}
+
+.dono-rel-loading {
+  padding: 80px;
+
+  color: #746461;
+  font-size: 10px;
+
+  text-align: center;
+}
+
+.dono-rel-vazio {
+  padding: 60px 20px;
+
+  color: #665754;
+  font-size: 10px;
+
+  text-align: center;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+  .dono-rel-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-rel-resumo,
+  .dono-rel-periodo-resumo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .dono-rel-main {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dono-rel-main {
+    padding: 25px 15px;
+  }
+
+  .dono-rel-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dono-rel-atualizar {
+    justify-content: center;
+  }
+
+  .dono-rel-resumo,
+  .dono-rel-periodo-resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-rel-filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dono-rel-campo input {
+    width: 100%;
+  }
+
+  .dono-rel-aplicar {
+    width: 100%;
+  }
+}

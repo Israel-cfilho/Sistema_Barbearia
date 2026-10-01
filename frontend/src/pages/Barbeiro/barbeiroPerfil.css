@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+.barbeiro-perfil-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #f3d5d0;
+}
+
+.barbeiro-perfil-main {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 42px 45px 60px;
+}
+
+/* HEADER */
+
+.barbeiro-perfil-header {
+  margin-bottom: 30px;
+}
+
+.barbeiro-perfil-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #fb1313;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.barbeiro-perfil-header h1 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 39px;
+  font-weight: 600;
+}
+
+.barbeiro-perfil-header p {
+  margin: 6px 0 0;
+
+  color: #a88985;
+
+  font-size: 13px;
+}
+
+/* CARD */
+
+.barbeiro-perfil-card {
+  max-width: 900px;
+
+  overflow: hidden;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.barbeiro-perfil-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 22px;
+
+  border-bottom: 1px solid #29201f;
+}
+
+.barbeiro-perfil-avatar {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(251, 19, 19, 0.1);
+
+  color: #fb4a4a;
+}
+
+.barbeiro-perfil-card-header h2 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-size: 17px;
+}
+
+.barbeiro-perfil-card-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #fb1313;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* FORM */
+
+.barbeiro-perfil-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+
+  padding: 22px;
+}
+
+.barbeiro-perfil-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.barbeiro-perfil-field.campo-completo {
+  grid-column: 1 / -1;
+}
+
+.barbeiro-perfil-field label {
+  color: #cbb5b1;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.barbeiro-perfil-field small {
+  color: #6f5d59;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+.perfil-input-container {
+  min-height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid #302322;
+  border-radius: 7px;
+
+  background: #111010;
+
+  color: #806d69;
+
+  transition: 0.2s ease;
+}
+
+.perfil-input-container:focus-within {
+  border-color:
+    rgba(251, 19, 19, 0.65);
+}
+
+.perfil-input-container input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #f3d5d0;
+
+  font-family: inherit;
+
+  font-size: 11px;
+}
+
+.perfil-input-container input::placeholder {
+  color: #5e4d4a;
+}
+
+.perfil-input-container.campo-bloqueado {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+.perfil-input-container.campo-bloqueado input {
+  cursor: not-allowed;
+}
+
+/* SENHA */
+
+.barbeiro-perfil-separador {
+  padding: 0 22px;
+}
+
+.barbeiro-perfil-separador span {
+  display: block;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #29201f;
+
+  color: #fb1313;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.perfil-eye-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #806d69;
+
+  cursor: pointer;
+}
+
+.perfil-eye-button:hover {
+  color: #f3d5d0;
+}
+
+/* AÇÕES */
+
+.barbeiro-perfil-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 0 22px 22px;
+}
+
+.salvar-perfil-barbeiro {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border: 1px solid
+    rgba(251, 19, 19, 0.55);
+
+  border-radius: 6px;
+
+  background:
+    rgba(251, 19, 19, 0.08);
+
+  color: #fb4a4a;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.salvar-perfil-barbeiro:hover {
+  background:
+    rgba(251, 19, 19, 0.15);
+}
+
+.salvar-perfil-barbeiro:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* LOADING */
+
+.barbeiro-perfil-loading {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #a88985;
+
+  font-size: 13px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .barbeiro-perfil-main {
+    margin-left: 0;
+
+    padding: 30px 20px 50px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .barbeiro-perfil-header h1 {
+    font-size: 35px;
+  }
+
+  .barbeiro-perfil-form {
+    grid-template-columns: 1fr;
+  }
+
+  .barbeiro-perfil-field.campo-completo {
+    grid-column: auto;
+  }
+
+  .barbeiro-perfil-actions {
+    justify-content: stretch;
+  }
+
+  .salvar-perfil-barbeiro {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .barbeiro-perfil-main {
+    padding: 25px 14px 40px;
+  }
+
+  .barbeiro-perfil-form {
+    padding: 18px;
+  }
+
+  .barbeiro-perfil-card-header {
+    padding: 18px;
+  }
+
+  .barbeiro-perfil-actions {
+    padding:
+      0
+      18px
+      18px;
+  }
+
+  .barbeiro-perfil-separador {
+    padding:
+      0
+      18px;
+  }
+}

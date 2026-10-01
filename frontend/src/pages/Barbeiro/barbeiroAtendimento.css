@@ -1,0 +1,570 @@
+* {
+  box-sizing: border-box;
+}
+
+.barbeiro-atendimentos-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #f3d5d0;
+}
+
+.barbeiro-atendimentos-main {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 42px 45px 60px;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.barbeiro-atendimentos-header {
+  margin-bottom: 28px;
+}
+
+.barbeiro-atendimentos-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #fb1313;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.barbeiro-atendimentos-header h1 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 39px;
+  font-weight: 600;
+}
+
+.barbeiro-atendimentos-header p {
+  margin: 6px 0 0;
+
+  color: #a88985;
+
+  font-size: 13px;
+}
+
+/* ============================================================
+   FILTROS
+============================================================ */
+
+.atendimentos-filtros {
+  display: flex;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
+}
+
+.atendimento-filtro {
+  padding: 9px 15px;
+
+  border: 1px solid #2f2422;
+  border-radius: 6px;
+
+  background: #0d0d0d;
+
+  color: #947d79;
+
+  font-family: inherit;
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.atendimento-filtro:hover {
+  color: #f3d5d0;
+  border-color: #4c3431;
+}
+
+.atendimento-filtro.active {
+  border-color: rgba(251, 19, 19, 0.55);
+
+  background: rgba(251, 19, 19, 0.08);
+
+  color: #fb4a4a;
+}
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.atendimentos-card {
+  overflow: hidden;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.atendimentos-card-header {
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #29201f;
+}
+
+.atendimentos-card-header > div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #fb1313;
+}
+
+.atendimentos-card-header h2 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-size: 15px;
+}
+
+.atendimentos-card-header p {
+  margin: 3px 0 0;
+
+  color: #806d69;
+
+  font-size: 10px;
+}
+
+/* ============================================================
+   LISTA
+============================================================ */
+
+.atendimentos-lista {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  padding: 16px;
+}
+
+.atendimento-card-item {
+  border: 1px solid #271e1d;
+  border-radius: 9px;
+
+  background: #101010;
+
+  overflow: hidden;
+}
+
+/* ============================================================
+   TOPO
+============================================================ */
+
+.atendimento-topo {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 13px 16px;
+
+  border-bottom: 1px solid #211918;
+}
+
+.atendimento-data-hora {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.atendimento-data-hora > div {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #806d69;
+
+  font-size: 10px;
+}
+
+.atendimento-data-hora strong {
+  color: #fb4a4a;
+
+  font-size: 13px;
+}
+
+/* ============================================================
+   CONTEÚDO
+============================================================ */
+
+.atendimento-conteudo {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 30px;
+
+  padding: 20px 16px;
+}
+
+.atendimento-cliente-area,
+.atendimento-servico-area {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.atendimento-avatar {
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #392826;
+  border-radius: 50%;
+
+  background: #191312;
+
+  color: #f3d5d0;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.atendimento-servico-icon {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #c99f99;
+}
+
+.atendimento-cliente-area > div:last-child,
+.atendimento-servico-area > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.atendimento-mini-label {
+  margin-bottom: 3px;
+
+  color: #6f5d59;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.atendimento-cliente-area strong,
+.atendimento-servico-area strong {
+  overflow: hidden;
+
+  color: #eadeda;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atendimento-info-secundaria {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 4px;
+
+  color: #8c7773;
+
+  font-size: 9px;
+}
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.atendimento-status {
+  width: fit-content;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.atendimento-status.pendente {
+  background: rgba(255, 145, 0, 0.08);
+  color: #e69b4b;
+}
+
+.atendimento-status.confirmado {
+  background: rgba(66, 153, 225, 0.08);
+  color: #63a7e6;
+}
+
+.atendimento-status.concluído,
+.atendimento-status.concluido {
+  background: rgba(72, 187, 120, 0.08);
+  color: #68c68d;
+}
+
+.atendimento-status.cancelado {
+  background: rgba(251, 19, 19, 0.08);
+  color: #fb4a4a;
+}
+
+/* ============================================================
+   AÇÕES
+============================================================ */
+
+.atendimento-acoes {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 13px 16px;
+
+  border-top: 1px solid #211918;
+
+  background: #0d0d0d;
+}
+
+.confirmar-atendimento-button,
+.concluir-atendimento-button {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.confirmar-atendimento-button {
+  border: 1px solid rgba(66, 153, 225, 0.35);
+
+  background: rgba(66, 153, 225, 0.06);
+
+  color: #63a7e6;
+}
+
+.confirmar-atendimento-button:hover {
+  background: rgba(66, 153, 225, 0.12);
+}
+
+.concluir-atendimento-button {
+  border: 1px solid rgba(72, 187, 120, 0.35);
+
+  background: rgba(72, 187, 120, 0.06);
+
+  color: #68c68d;
+}
+
+.concluir-atendimento-button:hover {
+  background: rgba(72, 187, 120, 0.12);
+}
+
+.confirmar-atendimento-button:disabled,
+.concluir-atendimento-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.cancelar-atendimento-button {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgba(251, 19, 19, 0.35);
+  border-radius: 6px;
+
+  background: rgba(251, 19, 19, 0.06);
+
+  color: #fb4a4a;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancelar-atendimento-button:hover {
+  background: rgba(251, 19, 19, 0.12);
+}
+
+.cancelar-atendimento-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   LOADING / VAZIO
+============================================================ */
+
+.atendimentos-loading,
+.atendimentos-vazio {
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #806d69;
+
+  font-size: 12px;
+}
+
+.atendimentos-vazio {
+  flex-direction: column;
+
+  gap: 10px;
+
+  text-align: center;
+}
+
+.atendimentos-vazio svg {
+  color: #433330;
+}
+
+.atendimentos-vazio strong {
+  color: #cbb5b1;
+
+  font-size: 13px;
+}
+
+.atendimentos-vazio p {
+  margin: 0;
+
+  color: #6f5d59;
+
+  font-size: 10px;
+}
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+
+@media (max-width: 900px) {
+
+  .barbeiro-atendimentos-main {
+    margin-left: 0;
+
+    padding: 30px 20px 50px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .barbeiro-atendimentos-header h1 {
+    font-size: 35px;
+  }
+
+  .atendimento-conteudo {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .atendimento-topo {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .atendimento-data-hora {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .atendimento-acoes {
+    justify-content: stretch;
+  }
+
+  .confirmar-atendimento-button,
+  .concluir-atendimento-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .barbeiro-atendimentos-main {
+    padding: 25px 14px 40px;
+  }
+
+  .atendimentos-lista {
+    padding: 10px;
+  }
+
+  .atendimento-data-hora {
+    gap: 10px;
+  }
+}

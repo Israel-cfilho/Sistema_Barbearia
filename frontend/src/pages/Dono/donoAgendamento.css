@@ -1,0 +1,832 @@
+.dono-ag-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #f3d5d0;
+}
+
+.dono-ag-main {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 45px;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.dono-ag-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.dono-ag-header > div:first-child > span {
+  color: #fb1313;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.dono-ag-header h1 {
+  margin: 5px 0;
+  font-size: 31px;
+}
+
+.dono-ag-header p {
+  margin: 0;
+  color: #887976;
+  font-size: 12px;
+}
+
+.dono-ag-total {
+  min-width: 170px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  border: 1px solid #29201f;
+  border-radius: 9px;
+  background: #0d0d0d;
+  color: #fb1313;
+}
+
+.dono-ag-total div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dono-ag-total span {
+  color: #776865;
+  font-size: 9px;
+}
+
+.dono-ag-total strong {
+  color: #f3d5d0;
+  font-size: 18px;
+}
+
+/* ============================================================
+   FILTROS
+============================================================ */
+
+.dono-ag-filtros {
+  display: grid;
+
+  grid-template-columns:
+    minmax(210px, 1fr)
+    160px
+    190px
+    170px
+    85px;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+  padding: 17px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+}
+
+.dono-ag-busca {
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  border: 1px solid #352725;
+  border-radius: 7px;
+
+  background: #090909;
+
+  color: #776865;
+}
+
+.dono-ag-busca:focus-within {
+  border-color: #fb1313;
+}
+
+.dono-ag-busca input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #f3d5d0;
+
+  font-size: 11px;
+}
+
+.dono-ag-busca input::placeholder {
+  color: #655754;
+}
+
+.dono-ag-input {
+  min-height: 43px;
+
+  padding: 0 12px;
+
+  border: 1px solid #352725;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #090909;
+
+  color: #b9a5a1;
+
+  font-size: 10px;
+}
+
+.dono-ag-input:focus {
+  border-color: #fb1313;
+}
+
+.dono-ag-limpar {
+  border: 1px solid #352725;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #8e7b77;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.dono-ag-limpar:hover {
+  border-color: #fb1313;
+  color: #fb4a4a;
+}
+
+/* ============================================================
+   LISTA
+============================================================ */
+
+.dono-ag-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dono-ag-card {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 19px 21px;
+
+  border: 1px solid #29201f;
+  border-radius: 9px;
+
+  background: #0d0d0d;
+
+  transition: 0.2s;
+}
+
+.dono-ag-card:hover {
+  border-color: #3c2c2a;
+  background: #100d0d;
+}
+
+/* ============================================================
+   DATA
+============================================================ */
+
+.dono-ag-data {
+  min-height: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding-right: 20px;
+
+  border-right: 1px solid #29201f;
+}
+
+.dono-ag-data strong {
+  color: #fb1313;
+  font-size: 21px;
+}
+
+.dono-ag-data span {
+  color: #756562;
+  font-size: 9px;
+}
+
+/* ============================================================
+   DADOS
+============================================================ */
+
+.dono-ag-dados {
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1fr)
+    minmax(140px, 1fr)
+    minmax(140px, 1fr);
+
+  gap: 25px;
+}
+
+.dono-ag-cliente {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dono-ag-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.08
+    );
+
+  color: #fb1313;
+}
+
+.dono-ag-cliente div:last-child,
+.dono-ag-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dono-ag-cliente span,
+.dono-ag-info-item span {
+  color: #655754;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.dono-ag-cliente strong,
+.dono-ag-info-item strong {
+  color: #d9c6c2;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   AÇÕES
+============================================================ */
+
+.dono-ag-acoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+}
+
+.dono-ag-status {
+  padding: 6px 8px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* PENDENTE */
+
+.dono-ag-status-pendente {
+  background:
+    rgba(
+      255,
+      193,
+      7,
+      0.09
+    );
+
+  color: #e4b441;
+}
+
+/* CONFIRMADO */
+
+.dono-ag-status-confirmado {
+  background:
+    rgba(
+      33,
+      150,
+      243,
+      0.09
+    );
+
+  color: #59a9e5;
+}
+
+/* CONCLUÍDO */
+
+.dono-ag-status-concluido {
+  background:
+    rgba(
+      46,
+      180,
+      92,
+      0.09
+    );
+
+  color: #59c77c;
+}
+
+/* CANCELADO */
+
+.dono-ag-status-cancelado {
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.08
+    );
+
+  color: #fb5757;
+}
+
+/* ============================================================
+   BOTÕES
+============================================================ */
+
+.dono-ag-btn {
+  min-height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 9px;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* CONFIRMAR */
+
+.dono-ag-confirmar {
+  border: 1px solid
+    rgba(
+      33,
+      150,
+      243,
+      0.25
+    );
+
+  background:
+    rgba(
+      33,
+      150,
+      243,
+      0.05
+    );
+
+  color: #5eace7;
+}
+
+.dono-ag-confirmar:hover {
+  background:
+    rgba(
+      33,
+      150,
+      243,
+      0.12
+    );
+}
+
+/* CONCLUIR */
+
+.dono-ag-concluir {
+  border: 1px solid
+    rgba(
+      55,
+      190,
+      105,
+      0.25
+    );
+
+  background:
+    rgba(
+      55,
+      190,
+      105,
+      0.05
+    );
+
+  color: #57c87c;
+}
+
+.dono-ag-concluir:hover {
+  background:
+    rgba(
+      55,
+      190,
+      105,
+      0.12
+    );
+}
+
+/* CANCELAR */
+
+.dono-ag-cancelar {
+  border: 1px solid
+    rgba(
+      251,
+      19,
+      19,
+      0.22
+    );
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.04
+    );
+
+  color: #fb5757;
+}
+
+.dono-ag-cancelar:hover {
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.11
+    );
+}
+
+/* ============================================================
+   PAGAMENTO
+============================================================ */
+
+.dono-ag-pagamento {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-left: 3px;
+
+  color: #8d7a77;
+}
+
+.dono-ag-pagamento select {
+  height: 31px;
+
+  padding: 0 28px 0 9px;
+
+  border: 1px solid #352725;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #090909;
+
+  color: #b9a5a1;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.dono-ag-pagamento select:hover {
+  border-color: #493532;
+}
+
+.dono-ag-pagamento select:focus {
+  border-color: #fb1313;
+}
+
+.dono-ag-pagar {
+  border: 1px solid
+    rgba(
+      251,
+      19,
+      19,
+      0.25
+    );
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.06
+    );
+
+  color: #fb5757;
+}
+
+.dono-ag-pagar:hover:not(:disabled) {
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.13
+    );
+}
+
+.dono-ag-pagar:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   PAGAMENTO REGISTRADO
+============================================================ */
+
+.dono-ag-pagamento-ok {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: 4px;
+
+  padding: 6px 9px;
+
+  border: 1px solid
+    rgba(
+      46,
+      180,
+      92,
+      0.18
+    );
+
+  border-radius: 5px;
+
+  background:
+    rgba(
+      46,
+      180,
+      92,
+      0.05
+    );
+
+  color: #59c77c;
+}
+
+.dono-ag-pagamento-ok > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.dono-ag-pagamento-ok span {
+  color: #6f8d77;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.dono-ag-pagamento-ok strong {
+  color: #65cf87;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   ERRO / LOADING / VAZIO
+============================================================ */
+
+.dono-ag-loading {
+  padding: 70px;
+
+  text-align: center;
+
+  color: #806f6c;
+
+  font-size: 11px;
+}
+
+.dono-ag-erro {
+  margin-bottom: 20px;
+
+  padding: 13px 15px;
+
+  border: 1px solid
+    rgba(
+      251,
+      19,
+      19,
+      0.3
+    );
+
+  border-radius: 7px;
+
+  background:
+    rgba(
+      251,
+      19,
+      19,
+      0.05
+    );
+
+  color: #fb6464;
+
+  font-size: 11px;
+}
+
+.dono-ag-vazio {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+
+  text-align: center;
+
+  color: #71615e;
+}
+
+.dono-ag-vazio svg {
+  margin-bottom: 15px;
+
+  color: #493a38;
+}
+
+.dono-ag-vazio h2 {
+  margin: 0 0 7px;
+
+  color: #bca8a4;
+
+  font-size: 15px;
+}
+
+.dono-ag-vazio p {
+  margin: 0;
+
+  font-size: 10px;
+}
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+
+@media (max-width: 1200px) {
+
+  .dono-ag-card {
+    grid-template-columns:
+      80px
+      minmax(0, 1fr);
+  }
+
+  .dono-ag-acoes {
+    grid-column: 2;
+
+    justify-content: flex-start;
+  }
+
+  .dono-ag-filtros {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+@media (max-width: 900px) {
+
+  .dono-ag-main {
+    margin-left: 0;
+
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .dono-ag-main {
+    padding: 25px 15px;
+  }
+
+  .dono-ag-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .dono-ag-total {
+    width: 100%;
+  }
+
+  .dono-ag-filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .dono-ag-card {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .dono-ag-data {
+    min-height: auto;
+
+    padding: 0 0 13px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid #29201f;
+  }
+
+  .dono-ag-dados {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .dono-ag-acoes {
+    grid-column: 1;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+  }
+
+  .dono-ag-pagamento {
+    width: 100%;
+
+    margin-left: 0;
+
+    flex-wrap: wrap;
+  }
+
+  .dono-ag-pagamento select {
+    flex: 1;
+
+    min-width: 150px;
+  }
+
+  .dono-ag-pagamento-ok {
+    margin-left: 0;
+  }
+}

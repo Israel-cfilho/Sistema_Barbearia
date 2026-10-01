@@ -1,0 +1,883 @@
+/* ============================================================
+   PÁGINA
+============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.barbeiro-dashboard-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 60% 0%,
+      rgba(72, 24, 20, 0.12),
+      transparent 28%
+    ),
+    #090909;
+
+  color: #f3d5d0;
+}
+
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL
+============================================================ */
+
+.barbeiro-dashboard-main {
+  min-height: 100vh;
+
+  margin-left: 240px;
+
+  padding: 42px 45px 60px;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.barbeiro-dashboard-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 34px;
+}
+
+.barbeiro-dashboard-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #fb1313;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.barbeiro-dashboard-header h1 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 39px;
+  font-weight: 600;
+}
+
+.barbeiro-dashboard-header p {
+  margin: 6px 0 0;
+
+  color: #a88985;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   PERFIL NO HEADER
+============================================================ */
+
+.barbeiro-dashboard-perfil {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.barbeiro-dashboard-perfil > div:first-child {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.barbeiro-dashboard-perfil strong {
+  color: #f5e8e5;
+
+  font-size: 12px;
+}
+
+.barbeiro-dashboard-perfil span {
+  margin-top: 2px;
+
+  color: #fb1313;
+
+  font-size: 10px;
+}
+
+.barbeiro-dashboard-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #402925;
+  border-radius: 50%;
+
+  background: #2f1a18;
+
+  color: #f3d5d0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   GRID DOS CARDS
+============================================================ */
+
+.barbeiro-resumo-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 17px;
+
+  margin-bottom: 24px;
+}
+
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.barbeiro-resumo-card {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111010,
+      #0d0d0d
+    );
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.barbeiro-resumo-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #3a2927;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151212,
+      #0e0e0e
+    );
+}
+
+
+/* ============================================================
+   ÍCONE DO CARD
+============================================================ */
+
+.barbeiro-resumo-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(251, 19, 19, 0.12);
+
+  color: #fb4a4a;
+}
+
+
+/* ============================================================
+   TEXTO DOS CARDS
+============================================================ */
+
+.barbeiro-resumo-card > span {
+  color: #d8c7c4;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.barbeiro-resumo-card > strong {
+  margin-top: 12px;
+
+  color: #f5e8e5;
+
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.barbeiro-resumo-card > strong.valor-card {
+  font-size: 26px;
+}
+
+.barbeiro-resumo-card small {
+  margin-top: auto;
+
+  color: #806d69;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   CARD PRÓXIMOS ATENDIMENTOS
+============================================================ */
+
+.proximos-atendimentos-card {
+  overflow: hidden;
+
+  border: 1px solid #29201f;
+  border-radius: 10px;
+
+  background: #0d0d0d;
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================================================
+   HEADER PRÓXIMOS ATENDIMENTOS
+============================================================ */
+
+.proximos-atendimentos-header {
+  min-height: 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #29201f;
+}
+
+.proximos-atendimentos-header > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #fb1313;
+}
+
+.proximos-atendimentos-header h2 {
+  margin: 0;
+
+  color: #f5e8e5;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.proximos-atendimentos-header p {
+  margin: 3px 0 0;
+
+  color: #806d69;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   BOTÃO VER AGENDA
+============================================================ */
+
+.proximos-atendimentos-header button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border:
+    1px solid
+    rgba(251, 19, 19, 0.32);
+
+  border-radius: 6px;
+
+  background:
+    rgba(251, 19, 19, 0.04);
+
+  color: #fb4a4a;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.proximos-atendimentos-header button:hover {
+  background:
+    rgba(251, 19, 19, 0.09);
+
+  border-color:
+    rgba(251, 19, 19, 0.55);
+
+  color: #ff6565;
+}
+
+
+/* ============================================================
+   LISTA DE ATENDIMENTOS
+============================================================ */
+
+.proximos-atendimentos-lista {
+  padding: 0 14px 14px;
+}
+
+
+/* ============================================================
+   ITEM DE ATENDIMENTO
+============================================================ */
+
+.atendimento-dashboard-item {
+  min-height: 81px;
+
+  display: grid;
+
+  grid-template-columns:
+    85px
+    1.4fr
+    1.3fr
+    110px
+    35px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 11px 8px;
+
+  border-bottom: 1px solid #201a19;
+
+  transition:
+    background 0.2s ease;
+}
+
+.atendimento-dashboard-item:hover {
+  background:
+    rgba(255, 255, 255, 0.012);
+}
+
+.atendimento-dashboard-item:last-child {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   HORÁRIO
+============================================================ */
+
+.atendimento-horario {
+  min-height: 55px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background:
+    rgba(251, 19, 19, 0.045);
+}
+
+.atendimento-horario strong {
+  color: #fb4a4a;
+
+  font-size: 14px;
+}
+
+.atendimento-horario span {
+  margin-top: 3px;
+
+  color: #8c7773;
+
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   CLIENTE
+============================================================ */
+
+.atendimento-cliente {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.cliente-avatar-dashboard {
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #342725;
+  border-radius: 50%;
+
+  background: #1b1615;
+
+  color: #f3d5d0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.atendimento-cliente > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.atendimento-cliente strong {
+  overflow: hidden;
+
+  color: #e9dcda;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atendimento-cliente span {
+  margin-top: 4px;
+
+  color: #8c7773;
+
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   SERVIÇO
+============================================================ */
+
+.atendimento-servico {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.servico-icon-dashboard {
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #c99f99;
+}
+
+.atendimento-servico > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.atendimento-servico strong {
+  overflow: hidden;
+
+  color: #e9dcda;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atendimento-servico span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: 4px;
+
+  color: #8c7773;
+
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.atendimento-status {
+  width: fit-content;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* PENDENTE */
+
+.atendimento-status.pendente {
+  background:
+    rgba(255, 145, 0, 0.08);
+
+  color: #e69b4b;
+}
+
+
+/* CONFIRMADO */
+
+.atendimento-status.confirmado {
+  background:
+    rgba(66, 153, 225, 0.08);
+
+  color: #63a7e6;
+}
+
+
+/* CONCLUÍDO */
+
+.atendimento-status.concluído,
+.atendimento-status.concluido {
+  background:
+    rgba(72, 187, 120, 0.08);
+
+  color: #68c68d;
+}
+
+
+/* CANCELADO */
+
+.atendimento-status.cancelado {
+  background:
+    rgba(251, 19, 19, 0.08);
+
+  color: #fb4a4a;
+}
+
+
+/* ============================================================
+   BOTÃO DETALHES
+============================================================ */
+
+.atendimento-detalhes-button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fb1313;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.atendimento-detalhes-button:hover {
+  background:
+    rgba(251, 19, 19, 0.07);
+
+  transform: translateX(2px);
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.barbeiro-dashboard-loading {
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #a88985;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   SEM ATENDIMENTOS
+============================================================ */
+
+.sem-atendimentos-dashboard {
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 30px;
+
+  color: #6f5d59;
+
+  text-align: center;
+}
+
+.sem-atendimentos-dashboard svg {
+  color: #4c3a37;
+}
+
+.sem-atendimentos-dashboard p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   RESPONSIVO - NOTEBOOK / TABLET GRANDE
+============================================================ */
+
+@media (max-width: 1150px) {
+
+  .barbeiro-resumo-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .atendimento-dashboard-item {
+    grid-template-columns:
+      75px
+      1fr
+      1fr
+      90px
+      30px;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVO - SEM SIDEBAR
+============================================================ */
+
+@media (max-width: 900px) {
+
+  .barbeiro-dashboard-main {
+    margin-left: 0;
+
+    padding: 30px 20px 50px;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVO - MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+  .barbeiro-dashboard-header {
+    flex-direction: column;
+  }
+
+  .barbeiro-dashboard-perfil {
+    display: none;
+  }
+
+  .barbeiro-dashboard-header h1 {
+    font-size: 36px;
+  }
+
+  .barbeiro-resumo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proximos-atendimentos-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .proximos-atendimentos-header button {
+    width: 100%;
+  }
+
+  .atendimento-dashboard-item {
+    grid-template-columns:
+      65px
+      1fr
+      30px;
+
+    gap: 12px;
+
+    padding: 15px 5px;
+  }
+
+  .atendimento-servico {
+    grid-column: 2 / 3;
+  }
+
+  .atendimento-status {
+    grid-column: 2 / 3;
+  }
+
+  .atendimento-detalhes-button {
+    grid-column: 3;
+
+    grid-row: 1 / 4;
+  }
+}
+
+
+
+/* ============================================================
+   RESPONSIVO - MOBILE PEQUENO
+============================================================ */
+
+@media (max-width: 450px) {
+
+  .barbeiro-dashboard-main {
+    padding: 25px 14px 40px;
+  }
+
+  .barbeiro-dashboard-header {
+    margin-bottom: 25px;
+  }
+
+  .barbeiro-dashboard-header h1 {
+    font-size: 34px;
+  }
+
+  .barbeiro-dashboard-header p {
+    max-width: 300px;
+
+    line-height: 1.5;
+  }
+
+  .barbeiro-resumo-card {
+    min-height: 170px;
+  }
+
+  .barbeiro-resumo-card > strong {
+    font-size: 29px;
+  }
+
+  .barbeiro-resumo-card > strong.valor-card {
+    font-size: 24px;
+  }
+
+  .proximos-atendimentos-card {
+    border-radius: 8px;
+  }
+
+  .proximos-atendimentos-lista {
+    padding: 0 10px 10px;
+  }
+
+  .cliente-avatar-dashboard {
+    width: 36px;
+    height: 36px;
+  }
+
+  .servico-icon-dashboard {
+    width: 34px;
+    height: 34px;
+  }
+}

@@ -1,0 +1,303 @@
+.acesso-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 25px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #1a1010 0%,
+      #0c0909 45%,
+      #050505 100%
+    );
+
+  color: #f3d5d0;
+}
+
+.acesso-container {
+  width: 100%;
+  max-width: 850px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acesso-logo {
+  width: 170px;
+  max-width: 50%;
+
+  margin-bottom: 30px;
+
+  object-fit: contain;
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+
+.acesso-cabecalho {
+  text-align: center;
+
+  margin-bottom: 42px;
+}
+
+.acesso-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #fb1313;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.acesso-cabecalho h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 44px;
+  font-weight: 700;
+
+  color: #f3d5d0;
+}
+
+.acesso-cabecalho h1 strong {
+  color: #fb1313;
+}
+
+.acesso-cabecalho p {
+  max-width: 500px;
+
+  margin: 10px auto 0;
+
+  color: #968987;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   OPÇÕES
+=========================== */
+
+.acesso-opcoes {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.acesso-card {
+  position: relative;
+
+  min-height: 235px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 30px;
+
+  border: 1px solid #352625;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151111,
+      #0c0a0a
+    );
+
+  color: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.acesso-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #fb1313;
+
+  box-shadow:
+    0 15px 40px
+    rgba(251, 19, 19, 0.12);
+}
+
+.acesso-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(251, 19, 19, 0.1);
+
+  color: #fb1313;
+}
+
+.acesso-card-texto span {
+  color: #fb1313;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.acesso-card-texto h2 {
+  margin: 7px 0 9px;
+
+  color: #f3d5d0;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.acesso-card-texto p {
+  margin: 0;
+
+  color: #8f817e;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.acesso-arrow {
+  position: absolute;
+
+  top: 30px;
+  right: 28px;
+
+  color: #5c4b48;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.acesso-card:hover
+.acesso-arrow {
+  color: #fb1313;
+
+  transform:
+    translateX(4px);
+}
+
+/* ===========================
+   SAIR
+=========================== */
+
+.acesso-sair {
+  margin-top: 30px;
+
+  padding: 8px 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #776865;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.acesso-sair:hover {
+  color: #fb4a4a;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width: 700px) {
+
+  .acesso-page {
+    padding: 35px 18px;
+  }
+
+  .acesso-opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .acesso-card {
+    min-height: 200px;
+  }
+
+  .acesso-cabecalho h1 {
+    font-size: 36px;
+  }
+
+  .acesso-logo {
+    width: 145px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .acesso-page {
+    align-items: flex-start;
+
+    padding-top: 35px;
+  }
+
+  .acesso-cabecalho {
+    margin-bottom: 30px;
+  }
+
+  .acesso-cabecalho h1 {
+    font-size: 32px;
+  }
+
+  .acesso-cabecalho p {
+    font-size: 12px;
+  }
+
+  .acesso-card {
+    min-height: 185px;
+
+    padding: 24px;
+  }
+
+  .acesso-icon {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 19px;
+  }
+
+  .acesso-arrow {
+    top: 25px;
+    right: 23px;
+  }
+}

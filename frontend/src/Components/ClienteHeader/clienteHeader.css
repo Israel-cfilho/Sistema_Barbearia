@@ -1,0 +1,323 @@
+/* ============================================================
+   HEADER
+============================================================ */
+.cliente-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  min-height: 72px;
+
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+
+  align-items: center;
+
+  padding: 0 35px;
+
+  border-bottom: 1px solid #1a1a1a;
+
+  background: #000000 !important;
+
+  backdrop-filter: none;
+
+  box-shadow:
+    0 6px 20px
+    rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.cliente-logo {
+  display: flex;
+
+  flex-direction: column;
+
+  cursor: pointer;
+}
+
+.cliente-logo span {
+  color: #c99f99;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.cliente-logo strong {
+  margin-top: 2px;
+
+  color: #f3d5d0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 24px;
+
+  line-height: 1;
+}
+
+/* ============================================================
+   MENU DESKTOP
+============================================================ */
+
+.desktop-menu {
+  height: 72px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+}
+
+.desktop-menu button {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #c99f99;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.desktop-menu button:hover {
+  color: #f3d5d0;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* ============================================================
+   ITEM ATIVO
+============================================================ */
+
+.desktop-menu button.active {
+  color: #fb1313;
+}
+
+.desktop-menu button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 20px;
+
+  right: 20px;
+
+  bottom: 0;
+
+  height: 3px;
+
+  border-radius: 5px 5px 0 0;
+
+  background: #fb1313;
+}
+
+/* ============================================================
+   ESPAÇO DIREITO
+============================================================ */
+
+.cliente-header-spacer {
+  width: 100%;
+}
+
+/* ============================================================
+   BOTÃO MOBILE
+============================================================ */
+
+.menu-mobile-button {
+  display: none;
+
+  justify-self: end;
+
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #f3d5d0;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.menu-mobile-button:hover {
+  color: #fb1313;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border-radius: 6px;
+}
+
+/* ============================================================
+   MENU MOBILE
+============================================================ */
+
+.mobile-menu {
+  position: sticky;
+
+  top: 72px;
+
+  z-index: 99;
+
+  display: none;
+
+  flex-direction: column;
+
+  border-bottom: 1px solid #241b1a;
+
+  background: #070707;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.mobile-menu button {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  padding: 15px 22px;
+
+  border: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  background: transparent;
+
+  color: #c99f99;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.mobile-menu button:hover {
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #f3d5d0;
+}
+
+.mobile-menu button.active {
+  color: #fb1313;
+
+  background: rgba(251, 19, 19, 0.05);
+}
+
+.mobile-menu button.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+  width: 3px;
+
+  background: #fb1313;
+}
+
+/* ============================================================
+   TABLET / MOBILE
+============================================================ */
+
+@media (max-width: 850px) {
+  .cliente-header {
+    grid-template-columns: 1fr auto;
+
+    min-height: 68px;
+
+    padding: 0 20px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .cliente-header-spacer {
+    display: none;
+  }
+
+  .menu-mobile-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: flex;
+
+    top: 68px;
+  }
+}
+
+/* ============================================================
+   MOBILE PEQUENO
+============================================================ */
+
+@media (max-width: 450px) {
+  .cliente-header {
+    padding: 0 15px;
+  }
+
+  .cliente-logo strong {
+    font-size: 21px;
+  }
+
+  .cliente-logo span {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .mobile-menu button {
+    padding: 14px 18px;
+  }
+}

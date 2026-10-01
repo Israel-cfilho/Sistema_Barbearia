@@ -1,0 +1,792 @@
+.meus-agendamentos-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1c0e0d,
+            #090909 45%,
+            #050505 100%
+        );
+
+    color: var(--text-primary);
+
+    padding: 60px 20px;
+}
+
+
+.meus-agendamentos-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   CABEÇALHO
+============================================================ */
+
+.meus-agendamentos-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.meus-agendamentos-header > span {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+.meus-agendamentos-header h1 {
+    margin: 10px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 48px;
+
+    color: var(--text-primary);
+}
+
+
+.meus-agendamentos-header h1 strong {
+    color: var(--primary);
+}
+
+
+.meus-agendamentos-header p {
+    margin-top: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   AÇÕES DA PÁGINA
+============================================================ */
+
+.meus-agendamentos-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.meus-agendamentos-actions button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.meus-agendamentos-actions button:hover {
+    background: var(--primary-hover);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   LISTA
+============================================================ */
+
+.agendamentos-lista {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.agendamento-card {
+    padding: 22px;
+
+    border: 1px solid #3a2927;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151110,
+            #0f0d0d
+        );
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.agendamento-card:hover {
+    border-color: #513431;
+}
+
+
+/* CARD CANCELADO */
+
+.agendamento-card.cancelado {
+    opacity: 0.58;
+}
+
+
+/* ============================================================
+   TOPO
+============================================================ */
+
+.agendamento-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid #362624;
+}
+
+
+.agendamento-card-top h2 {
+    margin: 6px 0 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 24px;
+
+    color: #f0e2df;
+}
+
+
+.agendamento-card-top > strong {
+    flex-shrink: 0;
+
+    color: var(--primary);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    font-variant-numeric: tabular-nums;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.agendamento-status {
+    color: var(--primary);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.agendamento-status.cancelado {
+    color: #a59491;
+}
+
+
+/* ============================================================
+   INFORMAÇÕES
+============================================================ */
+
+.agendamento-card-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding-top: 18px;
+}
+
+
+.agendamento-card-info > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+.agendamento-card-info svg {
+    flex-shrink: 0;
+
+    color: var(--primary);
+}
+
+
+/* ============================================================
+   CONFIRMAÇÃO DE PRESENÇA
+============================================================ */
+
+.confirmacao-presenca {
+    margin-top: 20px;
+
+    padding: 15px 16px;
+
+    border-radius: 8px;
+}
+
+
+/* ============================================================
+   AGUARDANDO CONFIRMAÇÃO
+============================================================ */
+
+.confirmacao-presenca.pendente {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    border:
+        1px solid rgba(
+            251,
+            19,
+            19,
+            0.28
+        );
+
+    background:
+        rgba(
+            251,
+            19,
+            19,
+            0.05
+        );
+}
+
+
+.confirmacao-aviso {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+.confirmacao-aviso > svg {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: var(--primary);
+}
+
+
+.confirmacao-aviso > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.confirmacao-aviso strong {
+    color: #f0e2df;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.confirmacao-aviso span {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   BOTÃO CONFIRMAR PRESENÇA
+============================================================ */
+
+.confirmar-presenca-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.confirmar-presenca-button:hover:not(:disabled) {
+    background: var(--primary-hover);
+
+    transform: translateY(-1px);
+}
+
+
+.confirmar-presenca-button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   PRESENÇA CONFIRMADA
+============================================================ */
+
+.confirmacao-presenca.confirmada {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    border:
+        1px solid rgba(
+            91,
+            180,
+            110,
+            0.28
+        );
+
+    background:
+        rgba(
+            91,
+            180,
+            110,
+            0.06
+        );
+}
+
+
+.confirmacao-presenca.confirmada > svg {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: #65c67a;
+}
+
+
+.confirmacao-presenca.confirmada > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.confirmacao-presenca.confirmada strong {
+    color: #82d892;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.confirmacao-presenca.confirmada span {
+    color: #9caa9f;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   CONFIRMAÇÃO EXPIRADA / CANCELAMENTO AUTOMÁTICO
+============================================================ */
+
+.confirmacao-presenca.expirado {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    border:
+        1px solid #4a302e;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+}
+
+
+.confirmacao-presenca.expirado > svg {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: #aa817c;
+}
+
+
+.confirmacao-presenca.expirado > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.confirmacao-presenca.expirado strong {
+    color: #c8aaa5;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.confirmacao-presenca.expirado span {
+    color: #907773;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   AÇÕES DO CARD
+============================================================ */
+
+.agendamento-card-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid #362624;
+}
+
+
+/* ============================================================
+   BOTÃO CANCELAR
+============================================================ */
+
+.cancelar-agendamento-button {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border:
+        1px solid #7a2929;
+
+    border-radius: 6px;
+
+    background:
+        rgba(
+            251,
+            19,
+            19,
+            0.06
+        );
+
+    color: #ff4b4b;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.cancelar-agendamento-button:hover:not(:disabled) {
+    border-color:
+        var(--primary);
+
+    background:
+        rgba(
+            251,
+            19,
+            19,
+            0.14
+        );
+
+    color:
+        var(--primary);
+}
+
+
+.cancelar-agendamento-button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.agendamentos-loading {
+    text-align: center;
+
+    color: var(--text-secondary);
+
+    padding: 40px;
+}
+
+
+/* ============================================================
+   VAZIO
+============================================================ */
+
+.agendamentos-vazio {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius: 12px;
+
+    color: var(--text-secondary);
+}
+
+
+.agendamentos-vazio svg {
+    color: var(--primary);
+}
+
+
+.agendamentos-vazio h2 {
+    margin: 15px 0 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--text-primary);
+}
+
+
+.agendamentos-vazio p {
+    font-size: 12px;
+}
+
+
+.agendamentos-vazio button {
+    margin-top: 18px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .agendamento-card-info {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .meus-agendamentos-header h1 {
+        font-size: 38px;
+    }
+
+
+    .confirmacao-presenca.pendente {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .confirmar-presenca-button {
+        align-self: flex-start;
+    }
+
+
+    .agendamento-card-actions {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 450px) {
+
+    .meus-agendamentos-page {
+        padding:
+            40px 14px;
+    }
+
+
+    .agendamento-card {
+        padding: 18px;
+    }
+
+
+    .agendamento-card-info {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .agendamento-card-top {
+        flex-direction: column;
+    }
+
+
+    .agendamento-card-top > strong {
+        font-size: 19px;
+    }
+
+
+    .confirmacao-presenca {
+        padding: 14px;
+    }
+
+
+    .confirmar-presenca-button {
+        width: 100%;
+    }
+
+
+    .cancelar-agendamento-button {
+        width: 100%;
+    }
+}
