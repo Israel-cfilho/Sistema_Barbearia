@@ -442,7 +442,7 @@ Recomenda-se utilizar variáveis de ambiente ou arquivos de configuração locai
 | ----------------------------- | --------------- |
 | Frontend                      | React           |
 | Build                         | Vite            |
-| Estilização                   | Tailwind CSS    |
+| Estilização                   | CSS             |
 | Roteamento                    | React Router    |
 | Ícones                        | Lucide React    |
 | Notificações                  | React Toastify  |
