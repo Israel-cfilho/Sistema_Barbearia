@@ -421,19 +421,6 @@ java -jar target/sistema-0.0.1-SNAPSHOT.jar
 
 ---
 
-# 🔒 Boas práticas de segurança
-
-Nunca publique no GitHub ou compartilhe publicamente:
-
-* Senhas do PostgreSQL
-* Senhas de e-mail
-* Chaves secretas JWT
-* Tokens
-* Credenciais de produção
-* Variáveis de ambiente sensíveis
-
-Recomenda-se utilizar variáveis de ambiente ou arquivos de configuração locais para essas informações.
-
 ---
 
 # 📌 Tecnologias
